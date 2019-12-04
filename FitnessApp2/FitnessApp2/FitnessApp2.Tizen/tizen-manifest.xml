@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="4" package="org.tizen.example.FitnessApp2.Tizen" version="1.0.0">
+	<profile name="common" />
+	<ui-application appid="org.tizen.example.FitnessApp2.Tizen"
+					exec="FitnessApp2.Tizen.dll"
+					type="dotnet"
+					multiple="false"
+					taskmanage="true"
+					nodisplay="false"
+					launch_mode="single">
+  <label>FitnessApp2.Tizen</label>
+	<icon>FitnessApp2.Tizen.png</icon>
+        <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+	</ui-application>
+</manifest>

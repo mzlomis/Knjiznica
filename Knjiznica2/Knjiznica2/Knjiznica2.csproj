@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4F62B90-82D8-4986-81C0-A46F573E8BE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Knjiznica2</RootNamespace>
+    <AssemblyName>Knjiznica2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator.Designer.cs">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autori.Designer.cs">
+      <DependentUpon>Autori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoriPopis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoriPopis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Clanovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clanovi.Designer.cs">
+      <DependentUpon>Clanovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClanoviPopis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClanoviPopis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KorisniciPopis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KorisniciPopis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IzvjestajKasnjenje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzvjestajKasnjenje.Designer.cs">
+      <DependentUpon>IzvjestajKasnjenje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzvjestajoKasnjenju.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IzvjestajoKasnjenju.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IzvjestajPoZanrovima1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IzvjestajPoZanrovima.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IzvjestajZanrovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzvjestajZanrovi.Designer.cs">
+      <DependentUpon>IzvjestajZanrovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Knjige.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Knjige.Designer.cs">
+      <DependentUpon>Knjige.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Knjiznica2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Knjiznica2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnickiPodaci.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KorisnickiPodaci.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnickiPodaci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorisnickiPodaci.Designer.cs">
+      <DependentUpon>KorisnickiPodaci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnickiPodaci1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KorisnickiPodaci.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KorisnickiPodaci1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KorisnickiPodaci.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Naslovna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Naslovna.Designer.cs">
+      <DependentUpon>Naslovna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopisAutora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopisAutora.Designer.cs">
+      <DependentUpon>PopisAutora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopisClanova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopisClanova.Designer.cs">
+      <DependentUpon>PopisClanova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopisKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopisKorisnika.Designer.cs">
+      <DependentUpon>PopisKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopisZanrova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopisZanrova.Designer.cs">
+      <DependentUpon>PopisZanrova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Posudba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Posudba.Designer.cs">
+      <DependentUpon>Posudba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosudbaPoZanrovima1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PosudbaPoZanrovima.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PosudbaZanrovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosudbaZanrovi.Designer.cs">
+      <DependentUpon>PosudbaZanrovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prijava.Designer.cs">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prijava2.cs">
+      <DependentUpon>KorisnickiPodaci.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zanrovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zanrovi.Designer.cs">
+      <DependentUpon>Zanrovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZanroviPopis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZanroviPopis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Administrator.resx">
+      <DependentUpon>Administrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autori.resx">
+      <DependentUpon>Autori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoriPopis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AutoriPopis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clanovi.resx">
+      <DependentUpon>Clanovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClanoviPopis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClanoviPopis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisniciPopis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KorisniciPopis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzvjestajKasnjenje.resx">
+      <DependentUpon>IzvjestajKasnjenje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzvjestajoKasnjenju.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IzvjestajoKasnjenju.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzvjestajPoZanrovima.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IzvjestajPoZanrovima1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzvjestajZanrovi.resx">
+      <DependentUpon>IzvjestajZanrovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Knjige.resx">
+      <DependentUpon>Knjige.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorisnickiPodaci.resx">
+      <DependentUpon>KorisnickiPodaci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Naslovna.resx">
+      <DependentUpon>Naslovna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopisAutora.resx">
+      <DependentUpon>PopisAutora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopisClanova.resx">
+      <DependentUpon>PopisClanova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopisKorisnika.resx">
+      <DependentUpon>PopisKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopisZanrova.resx">
+      <DependentUpon>PopisZanrova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Posudba.resx">
+      <DependentUpon>Posudba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosudbaPoZanrovima.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PosudbaPoZanrovima1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosudbaZanrovi.resx">
+      <DependentUpon>PosudbaZanrovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prijava.resx">
+      <DependentUpon>Prijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Zanrovi.resx">
+      <DependentUpon>Zanrovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZanroviPopis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ZanroviPopis.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="KorisnickiPodaci.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KorisnickiPodaci1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Knjiznica2DataSet.xsc">
+      <DependentUpon>Knjiznica2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Knjiznica2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Knjiznica2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Knjiznica2DataSet.xss">
+      <DependentUpon>Knjiznica2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KorisnickiPodaci.edmx.diagram">
+      <DependentUpon>KorisnickiPodaci.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Prijava2.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KorisnickiPodaci.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>KorisnickiPodaci.Context.cs</LastGenOutput>
+      <DependentUpon>KorisnickiPodaci.edmx</DependentUpon>
+    </Content>
+    <Content Include="KorisnickiPodaci.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KorisnickiPodaci.edmx</DependentUpon>
+      <LastGenOutput>KorisnickiPodaci1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
